@@ -1,0 +1,31 @@
+a{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+
+mat-toolbar{
+  font-size: 14px;
+
+}
+
+.nav_title{
+  text-decoration: none;
+  color: white;
+}
+
+.nav_links{
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
