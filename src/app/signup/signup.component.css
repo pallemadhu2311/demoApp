@@ -1,0 +1,59 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.container {
+  padding: 10px;
+  text-align: center;
+}
+
+span {
+  margin-left: 13px;
+}
+
+.card {
+  border-radius: 2px;
+  width: 40%;
+  height: 89%;
+  position: absolute;
+  top: 54.8%;
+  left: 78.6%;
+  /* bottom:11%; */
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  /* margin-right: 10px;
+  margin-bottom:90%; */
+}
+
+.signup-title {
+  font-size: 22px;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.submit-buttons {
+  padding: 3px;
+  margin-top: 10px;
+
+}
+
+.image-register{
+  background: url("/src/assets/images/register.jpg") no-repeat center;
+  width:50%
+}
+
+.example-card{
+  width: 750px;
+  height: fit-content;
+  margin-left: 15%;
+
+}
+

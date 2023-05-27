@@ -1,1 +1,60 @@
-<p>signup works!</p>
+<br />
+<form class="example-form">
+  <div class="image-register">
+    <mat-card class="example-card">
+      <img mat-card-image src="https://img.freepik.com/free-vector/add-user-concept-illustration_114360-557.jpg?w=1380&t=st=1685197268~exp=1685197868~hmac=30cf8a5aec97eaf26da925aabdb8ceba0182a79517674e8fdfb6150cd5e18425" alt="Photo of a Shiba Inu">
+    </mat-card>
+  </div>
+  <mat-card class="card">
+    <div class="signup-title">
+      Create Account | Signup Here
+      <hr />
+    </div>
+    <div class="container">
+      <mat-form-field class="example-full-width">
+        <mat-label>User Name</mat-label>
+        <input type="text" matInput placeholder="Ex. Madhu2311" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Full Name</mat-label>
+        <input matInput placeholder="Ex. Madhu" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Ex. madhu@gmail.com" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Date of Birth</mat-label>
+        <input type="date" matInput placeholder="Ex. madhu@gmail.com" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Phone Number</mat-label>
+        <span matPrefix>+91 &nbsp;</span>
+        <input type="tel" matInput placeholder="555-555-1234" maxlength="10" />
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Ex. Enter Password" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" matInput placeholder="Ex. Enter Confirm Password" />
+      </mat-form-field>
+
+      <div class="checkbox">
+        <mat-checkbox class="checkbox_title">I Agree to the terms & conditions</mat-checkbox>
+      </div>
+
+      <div class="submit-buttons">
+        <button mat-raised-button color="primary">Register</button>
+        &nbsp;&nbsp;&nbsp;
+        <a routerLink="/login" mat-raised-button color="accent">Login</a>
+      </div>
+      <div class="checkbox"></div>
+    </div>
+  </mat-card>
+</form>
