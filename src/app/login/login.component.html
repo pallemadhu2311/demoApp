@@ -1,1 +1,37 @@
-<p>login works!</p>
+<br />
+<form class="example-form">
+  <div class="image-register">
+    <mat-card class="example-card">
+      <img mat-card-image
+        src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=1380&t=st=1685456727~exp=1685457327~hmac=432cab0c2d914d2c0ce98be3fec3cd5b3e0cea208bd1cc79e33a0109a8edce48"
+        alt="Photo of a Login Banner" />
+    </mat-card>
+  </div>
+  <mat-card class="card">
+    <div class="signup-title">
+      SingIn to Account | Login Here
+      <hr />
+    </div>
+    <div class="container">
+      <mat-form-field class="example-full-width">
+        <mat-label>User Name</mat-label>
+        <input type="text" matInput placeholder="Ex. Madhu2311" />
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Ex. Enter Password" />
+      </mat-form-field>
+
+      <div class="submit-buttons">
+        <button routerLink="/signup" mat-raised-button color="primary">
+          Register
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <a mat-raised-button color="accent">Login</a>
+      </div>
+      <div class="checkbox"></div>
+    </div>
+  </mat-card>
+</form>
