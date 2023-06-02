@@ -45,15 +45,19 @@ span {
 
 }
 
-.image-register{
+/* .image-register{
   background: url("/src/assets/images/register.jpg") no-repeat center;
   width:50%
-}
+} */
 
 .example-card{
   width: 750px;
   height: fit-content;
   margin-left: 15%;
 
+}
+
+.input{
+  color: green;
 }
 

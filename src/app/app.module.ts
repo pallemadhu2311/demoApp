@@ -21,6 +21,7 @@ import {FormsModule} from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import {MatCardModule} from '@angular/material/card';
     FormsModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
 
   ],
   providers: [],
