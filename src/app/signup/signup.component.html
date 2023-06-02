@@ -1,12 +1,10 @@
 <br />
-<form class="example-form"   #signupForm="ngForm">
+<form [formGroup]="signupForm" class="example-form" (ngSubmit)="onSubmit()" >
   <div class="image-register">
     <mat-card class="example-card">
-      <img
-        mat-card-image
+      <img mat-card-image
         src="https://img.freepik.com/free-vector/add-user-concept-illustration_114360-557.jpg?w=1380&t=st=1685197268~exp=1685197868~hmac=30cf8a5aec97eaf26da925aabdb8ceba0182a79517674e8fdfb6150cd5e18425"
-        alt="Photo of a Shiba Inu"
-      />
+        alt="Photo of a Shiba Inu" />
     </mat-card>
   </div>
   <mat-card class="card">
@@ -14,105 +12,71 @@
       Create Account | Signup Here
       <hr />
     </div>
+
     <div class="container">
       <mat-form-field class="example-full-width">
         <mat-label>User Name</mat-label>
-        <input
-          type="text"
-          matInput
-          placeholder="Ex. Madhu2311"
-          id="userName"
-          name="userName"
-          [(ngModel)]="signupData.userName"
-          required
-        />
+        <input type="text" matInput placeholder="Ex. Madhu2311" id="userName" name="userName"
+          formControlName="userName" required />
+          <mat-error *ngIf="signupForm.get('userName')?.hasError('required')">Username is required</mat-error>
+
       </mat-form-field>
+
+
       <mat-form-field class="example-full-width">
         <mat-label>Full Name</mat-label>
-        <input
-          matInput
-          placeholder="Ex. Madhu"
-          id="fullName"
-          name="fullName"
-          [(ngModel)]="signupData.fullName"
-          required
-        />
+        <input matInput placeholder="Ex. Madhu" id="fullName" name="fullName" formControlName="fullName"
+          required />
+          <mat-error *ngIf="signupForm.get('fullName')?.hasError('required')">Full Name is required</mat-error>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Email</mat-label>
-        <input
-          type="email"
-          matInput
-          placeholder="Ex. madhu@gmail.com"
-          id="email"
-          name="email"
-          [(ngModel)]="signupData.email"
-          required
-        />
+        <input type="email" matInput placeholder="Ex. madhu@gmail.com" id="email" name="email"
+          formControlName="email" required />
+          <mat-error *ngIf="signupForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="signupForm.get('email')?.hasError('email')">Invalid email format</mat-error>
       </mat-form-field>
+
+
       <mat-form-field class="example-full-width">
         <mat-label>Date of Birth</mat-label>
-        <input
-          type="date"
-          matInput
-          placeholder="Ex. madhu@gmail.com"
-          id="dob"
-          name="dob"
-          [(ngModel)]="signupData.dob"
-          required
-        />
+        <input type="date" matInput placeholder="Ex. madhu@gmail.com" id="dob" name="dob" formControlName="dob"
+          required />
+          <mat-error *ngIf="signupForm.get('dob')?.hasError('required')">Date of Birth is required</mat-error>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Phone Number</mat-label>
         <span matPrefix>+91 &nbsp;</span>
-        <input
-          type="tel"
-          matInput
-          placeholder="555-555-1234"
-          maxlength="10"
-          id="pno"
-          name="pno"
-          [(ngModel)]="signupData.pno"
-          required
-        />
+        <input type="tel" matInput placeholder="555-555-1234" maxlength="10" id="pno" name="pno"
+          formControlName="pno" required />
         <mat-icon matSuffix>mode_edit</mat-icon>
+        <mat-error *ngIf="signupForm.get('pno')?.hasError('required')">Phone Number is required</mat-error>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Password</mat-label>
-        <input
-          type="password"
-          matInput
-          placeholder="Ex. Enter Password"
-          id="password"
-          name="password"
-          [(ngModel)]="signupData.password"
-          required
-        />
+        <input type="password" matInput placeholder="Ex. Enter Password" id="password" name="password"
+         formControlName="password" required />
+         <mat-error *ngIf="signupForm.get('password')?.hasError('required')">Password is required</mat-error>
       </mat-form-field>
+
       <mat-form-field class="example-full-width">
         <mat-label>Confirm Password</mat-label>
-        <input
-          type="password"
-          matInput
-          placeholder="Ex. Enter Confirm Password"
-          id="cpassword"
-          name="cpassword"
-          [(ngModel)]="signupData.cpassword"
-          required
-        />
+        <input type="password" matInput placeholder="Ex. Enter Confirm Password" id="cpassword" name="cpassword"
+          formControlName="cpassword" required />
+          <mat-error *ngIf="signupForm.get('cpassword')?.hasError('required')">Confirm Password is required</mat-error>
+          <mat-error *ngIf="signupForm.hasError('passwordMismatch')">Password and Confirm Password do not match</mat-error>
       </mat-form-field>
 
       <div class="checkbox">
-        <mat-checkbox class="checkbox_title" name="agreeTerms" [(ngModel)]="signupData.agreeTerms"
-          >I Agree to the terms & conditions</mat-checkbox
-        >
+        <mat-checkbox class="checkbox_title" name="agreeTerms" formControlName="agreeTerms" required>I Agree to
+          the terms & conditions</mat-checkbox>
       </div>
 
       <div class="submit-buttons">
-        <button mat-raised-button color="primary" (click)="signUp()">Register</button>
+        <button mat-raised-button color="primary" [disabled]="!signupForm.valid">Register</button>
         &nbsp;&nbsp;&nbsp;
         <a routerLink="/login" mat-raised-button color="accent">Login</a>
       </div>

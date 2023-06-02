@@ -2,81 +2,6 @@
   "UsersData": [
     {
       "id": 1,
-      "userName": "madhu2311",
-      "fullName": "Palle Madhu",
-      "email": "madbabu@gmail.com",
-      "dob": "1999-11-23",
-      "pno": "8919749266",
-      "password": "test",
-      "cpassword": "test",
-      "agreeTerms": true,
-      "role": "admin"
-    },
-    {
-      "id": 2,
-      "userName": "madhu",
-      "fullName": "MadhuBab",
-      "email": "madbabu@gmail.com",
-      "dob": "1999-10-23",
-      "pno": "8919711266",
-      "password": "test",
-      "cpassword": "test",
-      "agreeTerms": true,
-      "role": "customer"
-    },
-    {
-      "id": 3,
-      "userName": "madhu",
-      "fullName": "Palle Madhu",
-      "email": "madhu123@gmail.com",
-      "dob": "1111-11-22",
-      "pno": "123123123",
-      "password": "test",
-      "cpassword": "test",
-      "agreeTerms": true,
-      "role": "customer"
-    },
-    {
-      "id": 4,
-      "userName": "madhupalle",
-      "fullName": "Palle Madhu",
-      "email": "p150140@gmail.com",
-      "dob": "2021-12-14",
-      "pno": "8919749266",
-      "password": "Madhu123.",
-      "cpassword": "Madhu123.",
-      "agreeTerms": true,
-      "role": "customer",
-      "registeredAt": "2023-06-02T16:40:56.928Z"
-    },
-    {
-      "id": 5,
-      "userName": "teja",
-      "fullName": "Palle Teja",
-      "email": "Tej143@gmail.com",
-      "dob": "2004-04-12",
-      "pno": "6303985381",
-      "password": "tej",
-      "cpassword": "Tej",
-      "agreeTerms": true,
-      "role": "customer",
-      "registeredAt": "02/06/2023, 10:21 pm"
-    },
-    {
-      "id": 6,
-      "userName": "user",
-      "fullName": "Palle Madhu",
-      "email": "mad@gmail.com",
-      "dob": "2023-12-31",
-      "pno": "1111111111",
-      "password": "test",
-      "cpassword": "test",
-      "agreeTerms": true,
-      "role": "customer",
-      "registeredAt": "02/06/2023, 11:47 pm"
-    },
-    {
-      "id": 7,
       "userName": "smart_cookie",
       "fullName": "Palle Madhu",
       "email": "smartcookie@gmail.com",
@@ -85,8 +10,21 @@
       "password": "Madhu123.",
       "cpassword": "Madhu123.",
       "agreeTerms": true,
-      "role": "customer",
+      "role": "admin",
       "registeredAt": "02/06/2023, 11:52 pm"
+    },
+    {
+      "id": 2,
+      "userName": "pallemadhu",
+      "fullName": "Palle Madhu",
+      "email": "PalleMadhu@gmail.com",
+      "dob": "1999-11-23",
+      "pno": "8919749266",
+      "password": "test",
+      "cpassword": "test",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "03/06/2023, 01:28 am"
     }
   ],
   "orders": [
