@@ -2,53 +2,43 @@
   "UsersData": [
     {
       "id": 1,
+      "userName": "test",
+      "fullName": "test",
+      "email": "test@gmail.com",
+      "dob": "1999-11-22",
+      "pno": "1232334432",
+      "password": "test",
+      "cpassword": "test",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "03/06/2023, 01:48 pm"
+    },
+    {
       "userName": "smart_cookie",
       "fullName": "Palle Madhu",
       "email": "smartcookie@gmail.com",
-      "dob": "1999-11-23",
-      "pno": "8919749266",
-      "password": "Madhu123.",
-      "cpassword": "Madhu123.",
-      "agreeTerms": true,
-      "role": "admin",
-      "registeredAt": "02/06/2023, 11:52 pm"
-    },
-    {
-      "id": 2,
-      "userName": "pallemadhu",
-      "fullName": "Palle Madhu",
-      "email": "PalleMadhu@gmail.com",
       "dob": "1999-11-23",
       "pno": "8919749266",
       "password": "test",
       "cpassword": "test",
       "agreeTerms": true,
       "role": "customer",
-      "registeredAt": "03/06/2023, 01:28 am"
+      "registeredAt": "03/06/2023, 02:17 pm",
+      "id": 2
     }
   ],
-  "orders": [
+  "loginData": [
     {
       "id": 1,
-      "productId": 12345,
-      "quantity": 2
+      "userName": "test",
+      "password": "test",
+      "role": "admin"
     },
     {
-      "id": 2,
-      "productId": 67890,
-      "quantity": 1
-    }
-  ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "First Post",
-      "content": "Lorem ipsum dolor sit amet"
-    },
-    {
-      "id": 2,
-      "title": "Second Post",
-      "content": "Lorem ipsum dolor sit amet consectetur"
+      "userName": "smart_cookie",
+      "password": "test",
+      "role": "customer",
+      "id": 2
     }
   ]
 }

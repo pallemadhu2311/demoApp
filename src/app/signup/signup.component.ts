@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
-import {
-  FormControl,
-  FormBuilder,
-  Validators,
-  FormGroup,
-} from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 
@@ -27,13 +22,13 @@ export class SignupComponent {
 
   ngOnInit(): void {
     this.signupForm = this.fb.group({
-      id: [0],
+
       userName: ['', Validators.required],
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       dob: ['', Validators.required],
       pno: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-      password: ['', [Validators.required, Validators.minLength(2)]],
+      password: ['', [Validators.required, Validators.minLength(5)]],
       cpassword: ['', Validators.required],
       agreeTerms: [false],
       role: ['customer'],
@@ -44,7 +39,7 @@ export class SignupComponent {
 
   onSubmit() {
     if (this.signupForm.get('agreeTerms')?.value) {
-      this.signupForm.get('id')?.setValue(this.signupForm.get('id')?.value + 1); // Increment the ID
+      // this.signupForm.get('id')?.setValue(this.signupForm.get('id')?.value + 1); // Increment the ID
 
       const currentDate = new Date();
 
@@ -57,28 +52,37 @@ export class SignupComponent {
         hour12: true,
       });
 
+      const formValues = this.signupForm.value;
+
+      const loginData = {
+        id: formValues.id,
+        userName: formValues.userName,
+        password: formValues.password,
+        role: formValues.role, // Include the role field from formValues
+      };
+
       this.signupForm.get('registeredAt')?.setValue(formattedDate); // Set the registration date and time
 
-      // API call to save user data
-      this.data.saveUserData(this.signupForm.value).subscribe(
-        (res) => {
-          this.userData = res;
-
-          console.log('User data saved successfully', this.userData);
-          alert('Success');
-          this.route.navigate(['/login']);
-          this.signupForm.reset(); // Reset the form controls
-        },
-        (error) => {
-          console.error('Failed to save user data', error);
-          alert('Error occurred');
+      this.data.saveLoginData(loginData).subscribe(
+        () => {
+          console.log('Login data saved successfully');
+          // After login data is saved, proceed to save user data
+          this.saveUserData();
         }
       );
-    } else {
-      alert('Please agree to the terms');
     }
   }
 
-
-
+  saveUserData() {
+    const userData = this.signupForm.value;
+    this.data.saveUserData(userData).subscribe(
+      (res) => {
+        this.userData = res;
+        console.log('User data saved successfully', this.userData);
+        alert('Success');
+        this.route.navigate(['/login']);
+        this.signupForm.reset(); // Reset the form controls
+      }
+    );
+  }
 }
