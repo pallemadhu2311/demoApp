@@ -5,10 +5,10 @@
     <a routerLink="/about"><mat-icon>info</mat-icon>About</a>
     <a routerLink="/contactus"><mat-icon>contact_support</mat-icon>Contact</a>
     <ng-container *ngIf="isLoggedIn; else showLoginSignup">
-      <button mat-button (click)="logout()">
+      <a mat-button (click)="logout()">
         <mat-icon>exit_to_app</mat-icon>
         Logout
-      </button>
+      </a>
     </ng-container>
 
     <!-- Placeholder text to verify if isLoggedIn is correctly propagated -->

@@ -6,8 +6,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AuthService {
   private isLoggedInSubject = new BehaviorSubject<boolean>(false);
+
   isLoggedIn$ = this.isLoggedInSubject.asObservable();
-  loggedInUser: { username?: string, password?: string } = {};
+  loggedInUser: { username?: string; password?: string; role?: string } = {};
 
   constructor() {
     this.isLoggedInSubject.next(this.getLoginStatusFromLocalStorage());
@@ -15,8 +16,11 @@ export class AuthService {
 
   public getLoginStatusFromLocalStorage(): boolean {
     try {
-      const user = JSON.parse(localStorage.getItem('loggedInUser') || '');
-      if (user && user.username && user.password) {
+      const isLoggedIn = JSON.parse(
+        localStorage.getItem('isLoggedIn') || 'false'
+      );
+      const user = JSON.parse(localStorage.getItem('loggedInUser') || '{}');
+      if (isLoggedIn && user && user.username && user.password && user.role) {
         this.loggedInUser = user;
         return true;
       } else {
@@ -29,10 +33,12 @@ export class AuthService {
   }
 
   private setLoginStatusInLocalStorage(isLoggedIn: boolean): void {
+    localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn));
     if (isLoggedIn) {
       const user = {
         username: this.loggedInUser.username || '',
         password: this.loggedInUser.password || '',
+        role: this.loggedInUser.role || '',
       };
       localStorage.setItem('loggedInUser', JSON.stringify(user));
     } else {
@@ -40,18 +46,39 @@ export class AuthService {
     }
   }
 
-  updateLoginStatus(isLoggedIn: boolean, username?: string, password?: string): void {
+  updateLoginStatus(
+    isLoggedIn: boolean,
+    username?: string,
+    password?: string,
+    role?: string
+  ): void {
     if (username && password) {
       this.loggedInUser.username = username;
       this.loggedInUser.password = password;
+      this.loggedInUser.role = role !== undefined ? role : '';
     }
     this.setLoginStatusInLocalStorage(isLoggedIn);
     this.isLoggedInSubject.next(isLoggedIn);
   }
 
   clearLocalStorage(): void {
+    localStorage.clear();
     this.loggedInUser = {};
-    localStorage.removeItem('loggedInUser');
     this.isLoggedInSubject.next(false);
+  }
+
+  logout() {
+    // Clear the local storage
+    this.clearLocalStorage();
+
+    // Code snippet
+    // Update the user's login status
+    this.updateLoginStatus(false);
+    // Use code with caution. Learn more
+  }
+
+  isUserLoggedIn(): boolean {
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser') || '{}');
+    return loggedInUser && loggedInUser.username && loggedInUser.password;
   }
 }

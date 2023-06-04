@@ -5,6 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
+import { AuthGuard } from './authguard.guard';
 
 const routes: Routes = [
   {
@@ -26,11 +27,13 @@ const routes: Routes = [
   {
     path: 'dashboard/home',
     component: DashboardHomeComponent,
-  }
+    canActivate: [AuthGuard],
+  },
+  { path: '**', redirectTo: '/dashboard/home', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

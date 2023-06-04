@@ -38,6 +38,19 @@
       "role": "customer",
       "registeredAt": "04/06/2023, 01:23 pm",
       "id": 3
+    },
+    {
+      "userName": "teja",
+      "fullName": "Palle Teja",
+      "email": "teja@gmail.com",
+      "dob": "2004-04-12",
+      "pno": "6303985381",
+      "password": "tejateja",
+      "cpassword": "tejateja",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "04/06/2023, 04:33 pm",
+      "id": 4
     }
   ],
   "loginData": [
@@ -58,6 +71,12 @@
       "password": "Madhu123.",
       "role": "customer",
       "id": 3
+    },
+    {
+      "userName": "teja",
+      "password": "tejateja",
+      "role": "customer",
+      "id": 4
     }
   ]
 }

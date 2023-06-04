@@ -24,9 +24,18 @@ export class LoginComponent {
       userName: ['', Validators.required],
       password: ['', Validators.required],
     });
+
+    if (this.authService.isUserLoggedIn()) {
+      alert('User is already logged in');
+      // return;
+      this.router.navigate(['/dashboard/home']);
+    }
   }
 
   onSubmit() {
+
+
+
     const formValues = this.loginForm.value;
     const userName = formValues.userName;
     const password = formValues.password;
@@ -38,8 +47,7 @@ export class LoginComponent {
         );
 
         if (matchingUser) {
-          // this.authService.updateLoginStatus(true, userName, password);
-          this.authService.updateLoginStatus(true, userName, password);
+          this.authService.updateLoginStatus(true, userName, password, matchingUser.role);
           this.router.navigate(['/dashboard/home']);
         } else {
           alert('Invalid username or password');

@@ -3,6 +3,9 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+
+
 
 @Component({
   selector: 'app-signup',
@@ -17,7 +20,8 @@ export class SignupComponent {
   constructor(
     private data: DataService,
     private route: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private authservice:AuthService
   ) {}
 
   ngOnInit(): void {
@@ -35,9 +39,19 @@ export class SignupComponent {
       registeredAt: [''],
       // Other form fields
     });
+
+    if (this.authservice.isUserLoggedIn()) {
+      alert('User is already logged in');
+      // Redirect to a different page or perform any other action
+      this.route.navigate(['/dashboard/home']);
+
+    }
   }
 
   onSubmit() {
+
+
+
     if (this.signupForm.get('agreeTerms')?.value) {
       // this.signupForm.get('id')?.setValue(this.signupForm.get('id')?.value + 1); // Increment the ID
 
