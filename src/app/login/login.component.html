@@ -1,5 +1,5 @@
 <br />
-<form class="example-form">
+<form [formGroup]="loginForm" class="example-form">
   <div class="image-register">
     <mat-card class="example-card">
       <img mat-card-image
@@ -15,13 +15,13 @@
     <div class="container">
       <mat-form-field class="example-full-width">
         <mat-label>Username or Email</mat-label>
-        <input type="text" matInput placeholder="Ex. Madhu2311" />
+        <input type="text" matInput placeholder="Ex. Madhu2311"   formControlName="userName" />
       </mat-form-field>
 
 
       <mat-form-field class="example-full-width">
         <mat-label>Password</mat-label>
-        <input type="password" matInput placeholder="Ex. Enter Password" />
+        <input type="password" matInput placeholder="Ex. Enter Password"  formControlName="password"/>
       </mat-form-field>
 
       <div class="submit-buttons">
@@ -29,7 +29,7 @@
           Register
         </button>
         &nbsp;&nbsp;&nbsp;
-        <a mat-raised-button color="accent">Login</a>
+        <a mat-raised-button color="accent" [disabled]="!loginForm.valid" (click)="onSubmit()">Login</a>
       </div>
       <div class="checkbox"></div>
     </div>
