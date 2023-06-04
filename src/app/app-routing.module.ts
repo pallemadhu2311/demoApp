@@ -26,11 +26,7 @@ const routes: Routes = [
   {
     path: 'dashboard/home',
     component: HomeComponent,
-  },
-  {
-    path: '',
-    component: LoginComponent,
-  },
+  }
 ];
 
 @NgModule({

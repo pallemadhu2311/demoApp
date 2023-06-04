@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 export class LoginComponent {
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private route: Router , private data : DataService) {}
+  constructor(private fb: FormBuilder, private route: Router , private data : DataService , private auth:AuthService) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -31,20 +32,17 @@ export class LoginComponent {
     const formValues = this.loginForm.value;
     const userName = formValues.userName;
     const password = formValues.password;
-    console.log("Login Button Clicked");
+
     this.data.getLoginData(userName, password).subscribe(
       (res) => {
         if (res.length > 0) {
-          // Login successful
-          // You can store the user information in a service or local storage for future use
-          // For example, if you have a UserService, you can set the user data like: this.userService.setLoggedInUser(res[0]);
           const user = res[0];
+          localStorage.setItem('loggedInUser', JSON.stringify(user));
 
-          localStorage.setItem('loggedInUser', JSON.stringify(user)); // Store the user information in local storage
+          this.auth.updateLoginStatus(true); // Update login status in AuthService
 
-          this.route.navigate(['/dashboard/home/']); // Navigate to the dashboard component
+          this.route.navigate(['/dashboard/home']); // Redirect to localhost:4200/dashboard/home
         } else {
-          // Login failed
           alert('Invalid username or password');
         }
       },

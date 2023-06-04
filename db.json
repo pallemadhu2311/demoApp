@@ -25,6 +25,19 @@
       "role": "customer",
       "registeredAt": "03/06/2023, 02:17 pm",
       "id": 2
+    },
+    {
+      "userName": "madhu",
+      "fullName": "Palle Madhu",
+      "email": "madhupalle2311@gmail.com",
+      "dob": "1999-11-23",
+      "pno": "8919749266",
+      "password": "Madhu123.",
+      "cpassword": "Madhu123.",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "04/06/2023, 01:23 pm",
+      "id": 3
     }
   ],
   "loginData": [
@@ -39,6 +52,12 @@
       "password": "test",
       "role": "customer",
       "id": 2
+    },
+    {
+      "userName": "madhu",
+      "password": "Madhu123.",
+      "role": "customer",
+      "id": 3
     }
   ]
 }

@@ -4,7 +4,15 @@
     <a routerLink="/"><mat-icon>home</mat-icon>Home</a>
     <a routerLink="/about"><mat-icon>info</mat-icon>About</a>
     <a routerLink="/contactus"><mat-icon>contact_support</mat-icon>Contact</a>
-    <a routerLink="/signup"><mat-icon>person_add</mat-icon>Signup</a>
-    <a routerLink="/login"><mat-icon>meeting_room</mat-icon>Login</a>
+
+    <ng-container *ngIf="isLoggedIn;
+                  else showLoginSignup">
+      <a mat-button (click)="logout()"><mat-icon>exit_to_app</mat-icon>Logout</a>
+    </ng-container>
+
+    <ng-template #showLoginSignup>
+      <a routerLink="/signup"><mat-icon>person_add</mat-icon>Signup</a>
+      <a routerLink="/login"><mat-icon>meeting_room</mat-icon>Login</a>
+    </ng-template>
   </div>
 </mat-toolbar>
