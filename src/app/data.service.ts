@@ -24,8 +24,9 @@ export class DataService {
   }
 
   //Get Login Data -- Used to check If Password and Username are valid or not
-  getLoginData(userName: string, password: string): Observable<any> {
-    const url = `${this.apiUrl}/loginData?userName=${userName}&password=${password}`;
-    return this.http.get(url);
+
+
+  getLoginData(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/loginData`);
   }
 }

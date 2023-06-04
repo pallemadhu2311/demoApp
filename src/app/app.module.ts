@@ -23,7 +23,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HomeComponent } from './dashboard/home/home.component';
+import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 
 
 
@@ -37,7 +37,7 @@ import { HomeComponent } from './dashboard/home/home.component';
     ContactUsComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
+    DashboardHomeComponent,
 
   ],
   imports: [
