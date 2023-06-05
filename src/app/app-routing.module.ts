@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { AuthGuard } from './authguard.guard';
+import { DashboardProfileComponent } from './dashboard-profile/dashboard-profile.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,12 @@ const routes: Routes = [
     component: DashboardHomeComponent,
     canActivate: [AuthGuard],
   },
+  {
+    path: 'dashboard/profile',
+    component: DashboardProfileComponent,
+    canActivate: [AuthGuard],
+  }, // Update the route path to 'dashboard/profile',
+
   { path: '**', redirectTo: '/dashboard/home', pathMatch: 'full' },
 ];
 
