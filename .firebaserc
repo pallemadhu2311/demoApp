@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "demoapp-9c895"
-  }
+    "default": "demoapp-89a85",
+    "production": "demoapp-89a85"
+  },
+  "targets": {},
+  "etags": {}
 }
