@@ -4,17 +4,73 @@
 <div class="container">
   <mat-card class="side_card">
     <mat-card-content class="card_inside_buttons">
-      <button mat-raised-button><mat-icon>verified_user</mat-icon>{{userName}}</button>
-      <button mat-raised-button><mat-icon>person_add</mat-icon>Add User</button>
-      <button mat-raised-button><mat-icon>notifications</mat-icon>Notifications</button>
-      <button mat-raised-button><mat-icon>search</mat-icon>Search User</button>
-      <button mat-raised-button><mat-icon>announcement</mat-icon>Send Update</button>
-      <button mat-raised-button><mat-icon>timeline</mat-icon>Users Reports</button>
-      <button mat-raised-button><mat-icon>contact_support</mat-icon>Complaints</button>
+      <button mat-raised-button routerLink="dashboard/profile"
+        (click)="loadProfileComponent()"><mat-icon>verified_user</mat-icon>{{userName}}</button>
+
+      <button mat-raised-button routerLink="dashboard/adduser"
+      (click)="loadDashboardAddUser()"><mat-icon>person_add</mat-icon>Add User</button>
+
+      <button mat-raised-button routerLink="dashboard/notifications"
+        (click)="loadDashboardNotificationsComponent()"><mat-icon>notifications</mat-icon>Notifications</button>
+
+      <button mat-raised-button routerLink="dashboard/search-users"
+      (click)="loadDashboardSearchUser()"><mat-icon>search</mat-icon>Search User</button>
+
+      <button mat-raised-button routerLink="dashboard/send-updates"
+      (click)="loadDashboardSendUpdates()"><mat-icon>announcement</mat-icon>Send Updates</button>
+
+      <button mat-raised-button routerLink="dashboard/users-reports"
+      (click)="loadDashboardUsersReports()"><mat-icon>timeline</mat-icon>Users Reports</button>
+
+      <button mat-raised-button routerLink="dashboard/complaints"
+      (click)="loadDashboardComplaiints()"><mat-icon>contact_support</mat-icon>Complaints</button>
       <!-- <button mat-raised-button color="accent">Accent</button> -->
     </mat-card-content>
   </mat-card>
+
+
   <mat-card class="entire_screen">
-    <mat-card-content>Remaining portion</mat-card-content>
+    <mat-card-content *ngIf="showDashboardProfileComponent">
+      <div>
+        <app-dashboard-profile></app-dashboard-profile>
+      </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="showDashboardNotificationsComponent">
+      <div>
+        <app-dashboard-notifications></app-dashboard-notifications>
+      </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="showDashboardAddUserComponent">
+      <div>
+        <app-dashboard-adduser></app-dashboard-adduser>
+      </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="showDashboardSearchUserComponent">
+      <div>
+       <app-dashboard-search-user></app-dashboard-search-user>
+      </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="showDashboardSendUpdatesComponent">
+      <div>
+       <app-dashboard-send-updates></app-dashboard-send-updates>
+      </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="showDashboardUsersReportsComponent">
+      <div>
+       <app-dashboard-users-reports></app-dashboard-users-reports>
+      </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="showDashboardComplaintsComponent">
+      <div>
+       <app-dashboard-complaints></app-dashboard-complaints>
+      </div>
+    </mat-card-content>
+
   </mat-card>
 </div>

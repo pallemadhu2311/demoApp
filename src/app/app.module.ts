@@ -26,6 +26,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { DashboardProfileComponent } from './dashboard-profile/dashboard-profile.component';
 import { DashboardNotificationsComponent } from './dashboard-notifications/dashboard-notifications.component';
+import { DashboardAdduserComponent } from './dashboard-adduser/dashboard-adduser.component';
+import { DashboardSearchUserComponent } from './dashboard-search-user/dashboard-search-user.component';
+import { DashboardSendUpdatesComponent } from './dashboard-send-updates/dashboard-send-updates.component';
+import { DashboardUsersReportsComponent } from './dashboard-users-reports/dashboard-users-reports.component';
+import { DashboardComplaintsComponent } from './dashboard-complaints/dashboard-complaints.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +44,11 @@ import { DashboardNotificationsComponent } from './dashboard-notifications/dashb
     DashboardHomeComponent,
     DashboardProfileComponent,
     DashboardNotificationsComponent,
+    DashboardAdduserComponent,
+    DashboardSearchUserComponent,
+    DashboardSendUpdatesComponent,
+    DashboardUsersReportsComponent,
+    DashboardComplaintsComponent,
   ],
   imports: [
     BrowserModule,
