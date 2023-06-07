@@ -1,0 +1,37 @@
+
+
+.container {
+  display: flex;
+  height: 94%;
+}
+
+.side_card {
+  margin-top: 4%;
+  width: 15%;
+  height: 85%;
+  margin-left: 1%;
+  /* background-color: lightslategray; */
+}
+
+.entire_screen {
+  flex-grow: 1;
+  margin-left: 1%;
+  height: 95%;
+  margin-top: 1%;
+  margin-right: 1.5%;
+  /* margin-bottom: 50%; */
+  /* background-color: lightgray; */
+}
+
+button{
+
+  /* padding: 50px; */
+  width: 95%;
+  margin-bottom: 15px;
+}
+
+.mat-icon{
+  font-size: 18px;
+  vertical-align: middle;
+  margin-top: 0px;
+}

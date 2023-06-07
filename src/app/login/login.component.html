@@ -25,11 +25,13 @@
       </mat-form-field>
 
       <div class="submit-buttons">
-        <button routerLink="/signup" mat-raised-button color="primary">
-          Register
-        </button>
-        &nbsp;&nbsp;&nbsp;
         <a mat-raised-button color="accent" [disabled]="!loginForm.valid" (click)="onSubmit()">Login</a>
+        &nbsp;&nbsp;&nbsp;
+        <a routerLink="/signup" mat-raised-button color="primary">
+          Register
+        </a>
+
+
       </div>
       <div class="checkbox"></div>
     </div>

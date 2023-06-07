@@ -1,2 +1,20 @@
-<h3>Welcome {{ " " + userName}}</h3>
-<h4>{{userRole}}</h4>
+<!-- <h3>Welcome {{ " " + userName}}</h3>
+<h4>{{userRole}}</h4> -->
+
+<div class="container">
+  <mat-card class="side_card">
+    <mat-card-content class="card_inside_buttons">
+      <button mat-raised-button><mat-icon>verified_user</mat-icon>{{userName}}</button>
+      <button mat-raised-button><mat-icon>person_add</mat-icon>Add User</button>
+      <button mat-raised-button><mat-icon>notifications</mat-icon>Notifications</button>
+      <button mat-raised-button><mat-icon>search</mat-icon>Search User</button>
+      <button mat-raised-button><mat-icon>announcement</mat-icon>Send Update</button>
+      <button mat-raised-button><mat-icon>timeline</mat-icon>Users Reports</button>
+      <button mat-raised-button><mat-icon>contact_support</mat-icon>Complaints</button>
+      <!-- <button mat-raised-button color="accent">Accent</button> -->
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="entire_screen">
+    <mat-card-content>Remaining portion</mat-card-content>
+  </mat-card>
+</div>
