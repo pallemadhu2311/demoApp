@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { DashboardProfileComponent } from './dashboard-profile/dashboard-profile.component';
+import { DashboardNotificationsComponent } from './dashboard-notifications/dashboard-notifications.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DashboardProfileComponent } from './dashboard-profile/dashboard-profile
     FooterComponent,
     DashboardHomeComponent,
     DashboardProfileComponent,
+    DashboardNotificationsComponent,
   ],
   imports: [
     BrowserModule,

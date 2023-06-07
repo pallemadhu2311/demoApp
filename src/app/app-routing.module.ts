@@ -7,6 +7,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { AuthGuard } from './authguard.guard';
 import { DashboardProfileComponent } from './dashboard-profile/dashboard-profile.component';
+import { DashboardNotificationsComponent } from './dashboard-notifications/dashboard-notifications.component';
 
 const routes: Routes = [
   {
@@ -35,8 +36,14 @@ const routes: Routes = [
     component: DashboardProfileComponent,
     canActivate: [AuthGuard],
   }, // Update the route path to 'dashboard/profile',
+  {
+    path:'dashboard/notifications',
+    component:DashboardNotificationsComponent,
+    canActivate:[AuthGuard],
+  },
 
   { path: '**', redirectTo: '/dashboard/home', pathMatch: 'full' },
+
 ];
 
 @NgModule({

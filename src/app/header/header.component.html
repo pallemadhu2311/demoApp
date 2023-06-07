@@ -7,6 +7,7 @@
 
     <ng-container *ngIf="isLoggedIn; else showLoginSignup">
       <a routerLink="/dashboard/profile"><mat-icon>person</mat-icon>Profile</a>
+      <a routerLink="/dashboard/notifications"><mat-icon>notifications</mat-icon>Notifications</a>
       <a mat-button (click)="logout()">
         <mat-icon>exit_to_app</mat-icon>
         Logout
