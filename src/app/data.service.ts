@@ -29,4 +29,12 @@ export class DataService {
   getLoginData(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/loginData`);
   }
+
+  getUsersData(username: string): Observable<any> {
+    const url = `${this.apiUrl}/UsersData?userName=${username}`;
+    return this.http.get(url);
+  }
+
+
+
 }
