@@ -1,5 +1,13 @@
-<p>dashboard-profile works!</p>
+<!-- <p>dashboard-profile works!</p> -->
 
 <div *ngIf="userData">
-  <p>{{userData.fullName}}</p>
+  <p>User Name :  {{userData.userName}}</p>
+  <p>Full Name : {{userData.fullName}}</p>
+  <p>Email : {{userData.email}}</p>
+  <p>Data of Birth : {{userData.dob}}</p>
+  <p>Phone Number : {{userData.pno}}</p>
+  <p>Password : {{userData.password}}</p>
+  <p>Role :{{userData.role}}</p>
+  <p>User Created on :{{userData.registeredAt}}</p>
+
 </div>
