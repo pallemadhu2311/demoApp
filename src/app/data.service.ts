@@ -24,12 +24,11 @@ export class DataService {
   }
 
   //Get Login Data -- Used to check If Password and Username are valid or not
-
-
   getLoginData(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/loginData`);
   }
 
+  //get usersData -- after login this api will fetch all the details of a user
   getUsersData(username: string): Observable<any> {
     const url = `${this.apiUrl}/UsersData?userName=${username}`;
     return this.http.get(url);

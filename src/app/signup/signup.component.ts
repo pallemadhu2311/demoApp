@@ -37,6 +37,7 @@ export class SignupComponent {
       agreeTerms: [false],
       role: ['customer'],
       registeredAt: [''],
+      isActive:[false],
       // Other form fields
     });
 

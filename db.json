@@ -11,7 +11,8 @@
       "cpassword": "test",
       "agreeTerms": true,
       "role": "admin",
-      "registeredAt": "03/06/2023, 01:48 pm"
+      "registeredAt": "03/06/2023, 01:48 pm",
+      "isActive": true
     },
     {
       "userName": "smart_cookie",
@@ -24,7 +25,8 @@
       "agreeTerms": true,
       "role": "customer",
       "registeredAt": "03/06/2023, 02:17 pm",
-      "id": 2
+      "id": 2,
+      "isActive": true
     },
     {
       "userName": "madhu",
@@ -37,7 +39,8 @@
       "agreeTerms": true,
       "role": "customer",
       "registeredAt": "04/06/2023, 01:23 pm",
-      "id": 3
+      "id": 3,
+      "isActive": true
     },
     {
       "userName": "teja",
@@ -50,7 +53,8 @@
       "agreeTerms": true,
       "role": "customer",
       "registeredAt": "04/06/2023, 04:33 pm",
-      "id": 4
+      "id": 4,
+      "isActive": false
     },
     {
       "userName": "Palle Madhu",
@@ -63,7 +67,22 @@
       "agreeTerms": true,
       "role": "customer",
       "registeredAt": "07/06/2023, 09:56 pm",
-      "id": 5
+      "id": 5,
+      "isActive": false
+    },
+    {
+      "userName": "gireesh",
+      "fullName": "MANAM GIREESH",
+      "email": "manam@gmail.com",
+      "dob": "1997-05-21",
+      "pno": "7899732234",
+      "password": "giri",
+      "cpassword": "giri",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "08/06/2023, 11:00 am",
+      "isActive": false,
+      "id": 6
     }
   ],
   "loginData": [
@@ -96,6 +115,12 @@
       "password": "test",
       "role": "customer",
       "id": 5
+    },
+    {
+      "userName": "gireesh",
+      "password": "giri",
+      "role": "customer",
+      "id": 6
     }
   ]
 }
