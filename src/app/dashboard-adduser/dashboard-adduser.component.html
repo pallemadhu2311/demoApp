@@ -1,1 +1,143 @@
-<p>dashboard-adduser works!</p>
+<mat-card>
+  <mat-card-content>User Registration Form</mat-card-content>
+  <div class="container">
+    <form
+      class="example-form"
+      [formGroup]="dashboardRegistrationForm"
+      (ngSubmit)="submitForm()"
+    >
+      <div class="form-row">
+        <mat-form-field class="example-full-width">
+          <mat-label>User Name</mat-label>
+          <input type="text" matInput formControlName="userName" />
+          <mat-error
+            *ngIf="
+              formSubmitted &&
+              dashboardRegistrationForm.get('userName')?.hasError('required')
+            "
+            >User Name is required</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Full Name</mat-label>
+          <input type="text" matInput formControlName="fullName" />
+          <mat-error
+            *ngIf="
+              formSubmitted &&
+              dashboardRegistrationForm.get('fullName')?.hasError('required')
+            "
+            >Full Name is required</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" />
+          <mat-error
+            *ngIf="
+              formSubmitted &&
+              dashboardRegistrationForm.get('email')?.hasError('required')
+            "
+            >Email is required</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Date of Birth</mat-label>
+          <input type="date" matInput formControlName="dob" />
+          <mat-error
+            *ngIf="
+              formSubmitted &&
+              dashboardRegistrationForm.get('dob')?.hasError('required')
+            "
+            >Date of Birth is required</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field class="example-full-width">
+          <mat-label>Phone Number</mat-label>
+          <input type="tel" matInput formControlName="pno" maxlength="10" />
+          <mat-error
+            *ngIf="
+              formSubmitted &&
+              dashboardRegistrationForm.get('pno')?.hasError('required')
+            "
+            >Phone Number is required</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password" />
+          <mat-error
+            *ngIf="
+              formSubmitted &&
+              dashboardRegistrationForm.get('password')?.hasError('required')
+            "
+            >Password is required</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field class="example-full-width">
+          <mat-label>User Type</mat-label>
+          <mat-select formControlName="role">
+            <mat-option value="admin">Admin</mat-option>
+            <mat-option value="customer">Customer</mat-option>
+          </mat-select>
+          <mat-error
+            *ngIf="
+              formSubmitted &&
+              dashboardRegistrationForm.get('role')?.hasError('required')
+            "
+            >User Type is required</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width textarea-field">
+          <mat-label>Address</mat-label>
+          <textarea
+            type="textarea"
+            placeholder="Hyderabad - 500032"
+            matInput
+            formControlName="address"
+          ></textarea>
+          <mat-error
+            *ngIf="
+              formSubmitted &&
+              dashboardRegistrationForm.get('address')?.hasError('required')
+            "
+            >Address is required</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <div class="checkbox">
+          <mat-checkbox class="checkbox_title" formControlName="isActive"
+            >Is Active</mat-checkbox
+          >
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="submit-button">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="!dashboardRegistrationForm.valid"
+          >
+            Save User
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</mat-card>

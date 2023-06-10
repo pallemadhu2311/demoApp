@@ -14,6 +14,7 @@ import { DashboardSendUpdatesComponent } from './dashboard-send-updates/dashboar
 import { DashboardUsersReportsComponent } from './dashboard-users-reports/dashboard-users-reports.component';
 import { DashboardComplaintsComponent } from './dashboard-complaints/dashboard-complaints.component';
 
+
 const routes: Routes = [
   {
     path: 'login',
@@ -47,7 +48,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'dashboard/add-user',
+    path: ' ',
     component: DashboardAdduserComponent,
     canActivate: [AuthGuard],
   },

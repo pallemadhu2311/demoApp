@@ -1,60 +1,20 @@
 <!-- <p>dashboard-profile works!</p> -->
 
-<div *ngIf="userData">
+<div *ngIf="userData" class="total_grids">
   <div class="card-container">
     <div class="card">
       <mat-card>
         <mat-card-content>
-          <label>User Name : </label> {{ userData.userName }}</mat-card-content>
+          <label>User Name : </label> {{ userData.userName }}
+        </mat-card-content>
       </mat-card>
     </div>
 
     <div class="card">
       <mat-card>
-        <mat-card-content><label>Full Name : </label> {{ userData.fullName }}</mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-
-  <div class="card-container">
-    <div class="card">
-      <mat-card>
-        <mat-card-content><label>Email : </label> {{ userData.email }}</mat-card-content>
-      </mat-card>
-    </div>
-
-    <div class="card">
-      <mat-card>
-        <mat-card-content><label>Date of Birth : </label> {{ userData.dob }}</mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-
-  <div class="card-container">
-    <div class="card">
-      <mat-card>
-        <mat-card-content><label>Phone Number : </label> {{ userData.pno }}</mat-card-content>
-      </mat-card>
-    </div>
-
-    <div class="card">
-      <mat-card>
-        <mat-card-content><label>Password : </label> {{ userData.password }}</mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-
-  <div class="card-container">
-    <div class="card">
-      <mat-card>
-        <mat-card-content><label>Role : </label> {{ userData.role }}</mat-card-content>
-      </mat-card>
-    </div>
-
-    <div class="card">
-      <mat-card>
-        <mat-card-content><label>Account Created on : </label>
-          {{ userData.registeredAt }}</mat-card-content>
+        <mat-card-content>
+          <label>Full Name : </label> {{ userData.fullName }}
+        </mat-card-content>
       </mat-card>
     </div>
   </div>
@@ -63,8 +23,76 @@
     <div class="card">
       <mat-card>
         <mat-card-content>
-          <label>isActive : </label> {{ userData.isActive }}</mat-card-content>
+          <label>Email : </label> {{ userData.email }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="card">
+      <mat-card>
+        <mat-card-content>
+          <label>Date of Birth : </label> {{ userData.dob }}
+        </mat-card-content>
       </mat-card>
     </div>
   </div>
+
+  <div class="card-container">
+    <div class="card">
+      <mat-card>
+        <mat-card-content>
+          <label>Phone Number : </label> {{ userData.pno }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="card">
+      <mat-card>
+        <mat-card-content>
+          <label>Password : </label> {{ userData.password }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <mat-card>
+        <mat-card-content>
+          <label>Role : </label> {{ userData.role }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="card">
+      <mat-card>
+        <mat-card-content>
+          <label>Account Created on : </label> {{ userData.registeredAt }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <mat-card>
+        <mat-card-content>
+          <label>isActive : </label> {{ userData.isActive }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="card">
+      <mat-card>
+        <mat-card-content>
+          <label>Address : </label> {{ userData.address }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="edit-profile-button-container">
+    <button mat-raised-button color="primary" class="edit-profile-button">Edit Profile</button>
+  </div>
+
 </div>

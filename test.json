@@ -1,0 +1,121 @@
+{
+  "UsersData": {
+    "1": {
+      "id": 1,
+      "userName": "test",
+      "fullName": "test",
+      "email": "test@gmail.com",
+      "dob": "1999-11-22",
+      "pno": "1232334432",
+      "password": "test",
+      "cpassword": "test",
+      "agreeTerms": true,
+      "role": "admin",
+      "registeredAt": "03/06/2023, 01:48 pm",
+      "isActive": true
+    },
+    "2": {
+      "userName": "smart_cookie",
+      "fullName": "Palle Madhu",
+      "email": "smartcookie@gmail.com",
+      "dob": "1999-11-23",
+      "pno": "8919749266",
+      "password": "test",
+      "cpassword": "test",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "03/06/2023, 02:17 pm",
+      "id": 2,
+      "isActive": true
+    },
+    "3": {
+      "userName": "madhu",
+      "fullName": "Palle Madhu",
+      "email": "madhupalle2311@gmail.com",
+      "dob": "1999-11-23",
+      "pno": "8919749266",
+      "password": "Madhu123.",
+      "cpassword": "Madhu123.",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "04/06/2023, 01:23 pm",
+      "id": 3,
+      "isActive": true
+    },
+    "4": {
+      "userName": "teja",
+      "fullName": "Palle Teja",
+      "email": "teja@gmail.com",
+      "dob": "2004-04-12",
+      "pno": "6303985381",
+      "password": "tejateja",
+      "cpassword": "tejateja",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "04/06/2023, 04:33 pm",
+      "id": 4,
+      "isActive": false
+    },
+    "5": {
+      "userName": "Palle Madhu",
+      "fullName": "Palle Madhu",
+      "email": "pmadhu2311@gmail.com",
+      "dob": "1999-11-23",
+      "pno": "8919749266",
+      "password": "test",
+      "cpassword": "test",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "07/06/2023, 09:56 pm",
+      "id": 5,
+      "isActive": false
+    },
+    "6": {
+      "userName": "gireesh",
+      "fullName": "MANAM GIREESH",
+      "email": "manam@gmail.com",
+      "dob": "1997-05-21",
+      "pno": "7899732234",
+      "password": "giri",
+      "cpassword": "giri",
+      "agreeTerms": true,
+      "role": "customer",
+      "registeredAt": "08/06/2023, 11:00 am",
+      "isActive": false,
+      "id": 6
+    }
+  },
+  "loginData": {
+    "1": {
+      "id": 1,
+      "userName": "test",
+      "password": "test",
+      "role": "admin"
+    },
+    "2": {
+      "userName": "smart_cookie",
+      "password": "test",
+      "role": "customer",
+      "id": 2
+    },
+    "3": {
+      "userName": "madhu",
+      "password": "Madhu123.",
+      "role": "customer",
+      "id": 3
+    },
+    "4": {
+      "userName": "teja",
+      "password": "tejateja",
+      "role": "customer",
+      "id": 4
+    },
+    "5": {
+      "userName": "Palle Madhu",
+      "password": "test",
+      "role": "customer",
+      "id": 5
+    },
+   
+  }
+}

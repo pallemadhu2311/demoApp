@@ -31,6 +31,8 @@ import { DashboardSearchUserComponent } from './dashboard-search-user/dashboard-
 import { DashboardSendUpdatesComponent } from './dashboard-send-updates/dashboard-send-updates.component';
 import { DashboardUsersReportsComponent } from './dashboard-users-reports/dashboard-users-reports.component';
 import { DashboardComplaintsComponent } from './dashboard-complaints/dashboard-complaints.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { DashboardComplaintsComponent } from './dashboard-complaints/dashboard-c
     DashboardSendUpdatesComponent,
     DashboardUsersReportsComponent,
     DashboardComplaintsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ import { DashboardComplaintsComponent } from './dashboard-complaints/dashboard-c
     MatCardModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

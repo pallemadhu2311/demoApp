@@ -33,6 +33,7 @@
     <mat-card-content *ngIf="showDashboardProfileComponent">
       <div>
         <app-dashboard-profile></app-dashboard-profile>
+
       </div>
     </mat-card-content>
 
@@ -45,6 +46,7 @@
     <mat-card-content *ngIf="showDashboardAddUserComponent">
       <div>
         <app-dashboard-adduser></app-dashboard-adduser>
+        <router-outlet></router-outlet>
       </div>
     </mat-card-content>
 
